@@ -1,0 +1,56 @@
+{
+    "name": "F20DV - Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "eamodio.gitlens",
+                "mhutchie.git-graph",
+                "EditorConfig.EditorConfig",
+                "vscode-icons-team.vscode-icons",
+                "aaron-bond.better-comments",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "tomoki1207.pdf",
+                "yzhang.markdown-all-in-one",
+                "bierner.github-markdown-preview",
+                "ritwickdey.LiveServer",
+                // HTML and CSS
+                "ecmel.vscode-html-css",
+                "pranaygp.vscode-css-peek",
+                "Zignd.html-css-class-completion",
+                "formulahendry.auto-rename-tag",
+                // JavaScript
+                "xabikos.JavaScriptSnippets",
+                "ambar.bundle-size",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "meganrogge.template-string-converter",
+                "cssho.vscode-svgviewer", // SVG
+                "mechatroner.rainbow-csv" // CSV
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
+        }
+    },
+    "forwardPorts": [5500],
+    "portsAttributes": {
+        "5500": {
+            "label": "Live Server",
+            "onAutoForward": "notify"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+            "username": "CSK"
+        },
+        "ghcr.io/devcontainers/features/git-lfs:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        }
+    },
+    "remoteUser": "CSK"
+}

@@ -1,0 +1,71 @@
+#output {
+	width: 40%;
+	height: 700px;
+	overflow: auto;
+	background-color: #1e1e1e;
+	color: #9cdcfe;
+	padding: 10px;
+	white-space: pre-wrap;
+	font-family: monospace;
+	border-radius: 5px;
+	/* Other styles */
+	overflow-y: scroll;
+	font-size: 16px;
+}
+
+#output.tutorial6 {
+	width: 75%;
+	height: 450px;
+}
+
+@media only screen and (max-width: 300px) {
+	#output {
+		width: 100%;
+		/* padding: 5px; */
+		font-size: 8px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	#output {
+		width: 100%;
+		padding: 5px;
+		font-size: 14px;
+	}
+
+	#output.tutorial6 {
+		width: 95%;
+	}
+
+	#output::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#output {
+		width: 80%;
+	}
+
+	/* Larger scrollbar for #output */
+	#output::-webkit-scrollbar {
+		width: 16px;
+	}
+
+	#output::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 8px;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	#output {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 2560px) {
+	#output {
+		font-size: 20px;
+	}
+}

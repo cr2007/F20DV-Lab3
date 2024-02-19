@@ -1,0 +1,24 @@
+svg.barchart {
+	fill: #3F94D3;
+	stroke: #003C71;
+	stroke-width: 2px;
+}
+
+text {
+	font-family: sans-serif;
+	font-size: 12px;
+	fill: #121212;
+	stroke: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	svg.barchart {
+		fill: #52AEFF;
+		stroke: #FBFAF2;
+		stroke-width: 1px;
+	}
+
+	svg.barchart text {
+		fill: #FBFAF2;
+	}
+}

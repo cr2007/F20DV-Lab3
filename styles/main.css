@@ -1,0 +1,55 @@
+@import "vars.css";
+@import "barchart.css";
+@import "bubblechart.css";
+@import "scatterplot.css";
+@import "histogram.css";
+@import "consoleOutput.css";
+
+h1 {
+    color: var(--main-color);
+}
+
+h3 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p.myClass {
+    color: var(--accent-color);
+}
+
+p#myId {
+    color: goldenrod;
+}
+
+b {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+kbd {
+	padding: 2px 4px;
+	font-size: 0.85em;
+	color: #f9f9f9; /* Lighter text color for contrast against dark background */
+	background-color: #555; /* Darker background color */
+	border: 1px solid #242424; /* Lighter border color for contrast against dark background */
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(0,0,0,.1), 0 0 0 2px #555 inset; /* Lighter box shadow for contrast against dark background */
+	white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+	* {
+		color: #FCFBFC;
+		background-color: #121212;
+	}
+
+	kbd {
+		padding: 2px 4px;
+		font-size: 0.85em;
+		color: #555;
+		background-color: #fcfcfc;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 0 0 2px #ffffff inset;
+		white-space: nowrap;
+	}
+}

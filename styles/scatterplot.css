@@ -1,0 +1,26 @@
+svg.scatterplot {
+	fill: #3F94D3;
+	stroke: #003C71;
+	stroke-width: 2px;
+	border: 1px solid #121212;
+}
+
+text {
+	font-family: sans-serif;
+	font-size: 12px;
+	fill: #121212;
+	stroke: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	svg.scatterplot {
+		fill: #52AEFF;
+		stroke: #FBFAF2;
+		stroke-width: 1px;
+		border: 1px solid #FBFAF2;
+	}
+
+	svg.scatterplot text {
+		fill: #FBFAF2;
+	}
+}
