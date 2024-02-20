@@ -4,6 +4,12 @@ svg.barchart {
 	stroke-width: 2px;
 }
 
+svg.barchart rect.bar.highlighted {
+	fill: red;
+	stroke: black;
+	stroke-width: 4px;
+}
+
 text {
 	font-family: sans-serif;
 	font-size: 12px;
@@ -16,6 +22,12 @@ text {
 		fill: #52AEFF;
 		stroke: #FBFAF2;
 		stroke-width: 1px;
+	}
+
+	svg.barchart rect.bar.highlighted {
+		fill: #ff3838;
+		stroke: #eeeeff;
+		stroke-width: 4px;
 	}
 
 	svg.barchart text {
