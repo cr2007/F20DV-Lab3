@@ -32,9 +32,9 @@
 ---
 
 #### Progress
-![0%](https://progress-bar.dev/0)
+![25%](https://progress-bar.dev/25)
 
-- [ ] [Highlight and Tooltips](#exercise-highlight-and-tooltips)
+- [X] [Highlight and Tooltips](#exercise-highlight-and-tooltips)
 - [ ] [Linked Selection and Filters](#exercise-linked-selection-and-filters)
 - [ ] [Let's Make an Animated Bar Chart](#exercise-lets-make-an-animated-bar-chart)
 - [ ] [D3 Behaviours Sandbox](#exercise-d3-behaviours-sandbox)
@@ -47,6 +47,11 @@
 
 #### Exercise: Highlight and Tooltips
 
+In this exercise, we added two simple interactions with our bar charts for basic interaction with the charts.
+
+Firstly, we implemented a way to highlight the Bar Charts when the mouse cursor was hovered over the bars.
+
+Secondly, we added a simple tooltip text that is displayed to show additional information about the bars when the cursor is hovered over the bars.
 
 ### Code
 
@@ -56,8 +61,37 @@
 <script>hljs.highlightAll();</script>
 
 <details>
-<summary><code>main.js</code></summary>
+<summary><code>barChart.js</code></summary>
+<pre><code class="language-javascript">export default class BarChart {
 
+// ...
+
+    #updateBars() {
+        this.bars = this.bars
+            .data(this.data, (d) => d[0])
+            // ...
+            .on("mouseover", (event, datum) => {
+            // Highlight the bar on cursor hover
+                d3.select(event.target)
+                .classed("highlighted", true)
+            })
+            .on("mouseout", (event, datum) => {
+                // Remove the highlight on cursor out
+                d3.select(event.target)
+                .classed("highlighted", false)
+            });
+
+        // Add tooltips
+        // Adds a title element to all bars
+        this.bars.selectAll("title")
+            .data(d => [d])
+            .join("title")
+            .text(d => `${d[0]}: ${d[1]}`);
+    }
+
+// ...
+
+}
 </code></pre>
 </details>
 
