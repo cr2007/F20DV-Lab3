@@ -1,6 +1,6 @@
 "use strict";
 
-import BarChart from './visualizations/barChart.js';
+import BarChart from './visualizations/barChart_tut9.js';
 
 console.log(`d3.version: ${d3.version}`);
 
