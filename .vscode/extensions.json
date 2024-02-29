@@ -1,28 +1,28 @@
 {
-	"recommendations": [
-		"eamodio.gitlens",
-		"mhutchie.git-graph",
-		"EditorConfig.EditorConfig",
-		"vscode-icons-team.vscode-icons",
-		"aaron-bond.better-comments",
-		"VisualStudioExptTeam.vscodeintellicode",
-		"tomoki1207.pdf",
-		"yzhang.markdown-all-in-one",
-		"bierner.github-markdown-preview",
-		"ritwickdey.LiveServer",
-		// HTML and CSS
-		"ecmel.vscode-html-css",
-		"pranaygp.vscode-css-peek",
-		"Zignd.html-css-class-completion",
-		"formulahendry.auto-rename-tag",
-		// JavaScript
-		"xabikos.JavaScriptSnippets",
-		"ambar.bundle-size",
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		"meganrogge.template-string-converter",
-		"cssho.vscode-svgviewer", // SVG
-		"mechatroner.rainbow-csv", // CSV
-		"GitHub.copilot"
-	]
+    "recommendations": [
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "EditorConfig.EditorConfig",
+        "vscode-icons-team.vscode-icons",
+        "aaron-bond.better-comments",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "tomoki1207.pdf",
+        "yzhang.markdown-all-in-one",
+        "bierner.github-markdown-preview",
+        "ritwickdey.LiveServer",
+        // HTML and CSS
+        "ecmel.vscode-html-css",
+        "pranaygp.vscode-css-peek",
+        "Zignd.html-css-class-completion",
+        "formulahendry.auto-rename-tag",
+        // JavaScript
+        "xabikos.JavaScriptSnippets",
+        "ambar.bundle-size",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "meganrogge.template-string-converter",
+        "cssho.vscode-svgviewer", // SVG
+        "mechatroner.rainbow-csv", // CSV
+        "GitHub.copilot"
+    ]
 }
