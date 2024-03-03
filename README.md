@@ -32,11 +32,11 @@
 ---
 
 #### Progress
-![50%](https://progress-bar.dev/50)
+![75%](https://progress-bar.dev/75)
 
 - [X] [Highlight and Tooltips](#exercise-highlight-and-tooltips)
 - [X] [Linked Selection and Filters](#exercise-linked-selection-and-filters)
-- [ ] [Let's Make an Animated Bar Chart](#exercise-lets-make-an-animated-bar-chart)
+- [X] [Let's Make an Animated Bar Chart](#exercise-lets-make-an-animated-bar-chart)
 - [ ] [D3 Behaviours Sandbox](#exercise-d3-behaviours-sandbox)
 
 ---
@@ -266,11 +266,44 @@ bar3.setBarClick(filterGenre);
 
 #### Exercise: Let's Make an Animated Bar Chart
 
+Adds an animated element for the bar chart using D3 Transitions.
+
+There is a visual feedback when `bar3` is clicked, showing an animation in `bar1` and `bar2`.
 
 ### Code
 <details>
-<summary><code>main.js</code></summary>
-<pre><code class="language-javascript">
+<summary><code>barChart.js</code></summary>
+<pre><code class="language-javascript">export default class BarChart {
+    // ...
+
+    #updateBars() {
+        // Bind and join rectangles to data
+        this.bars = this.bars
+        .data(this.data, (d) => d[0])
+        .join(
+            // Initial placement of new rectangles
+            enter => enter.append("rect")
+                    .attr("x", (d) => this.scaleX(d[0]))
+                    .attr("y", (d) => this.scaleY(0)) // Aligned at Bottom
+                    .attr("width", this.scaleX.bandwidth())
+                    .attr("height", 0), // No height
+            // Leave existing rectangles untouched
+            update => update,
+            exit => exit.transition().duration(300)
+                    .attr("y", d => this.scaleY(0)) // Aligned at bottom
+                    .attr("height", 0) // No Height
+                    .remove() // Destroy rectangle when finished
+        )
+        .classed("bar", true);
+
+        // Animate Placement and sizing (enter + update only)
+        this.bars.transition().duration(500)
+            .attr("x", (d) => this.scaleX(d[0]))
+            .attr("y", (d) => this.scaleY(d[1]))
+            .attr("width", this.scaleX.bandwidth())
+            .attr("height", (d) => this.scaleY(0) - this.scaleY(d[1]));
+    }
+}
 </code></pre>
 </details>
 
