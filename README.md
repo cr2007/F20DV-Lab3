@@ -32,12 +32,12 @@
 ---
 
 #### Progress
-![75%](https://progress-bar.dev/75)
+![100%](https://progress-bar.dev/100)
 
 - [X] [Highlight and Tooltips](#exercise-highlight-and-tooltips)
 - [X] [Linked Selection and Filters](#exercise-linked-selection-and-filters)
 - [X] [Let's Make an Animated Bar Chart](#exercise-lets-make-an-animated-bar-chart)
-- [ ] [D3 Behaviours Sandbox](#exercise-d3-behaviours-sandbox)
+- [X] [D3 Behaviours Sandbox](#exercise-d3-behaviours-sandbox)
 
 ---
 
